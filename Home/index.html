@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- Start of the page-->
+<html lang="en">
+
+	      <title>Banana-nana | Home</title>
+	
+
+  <head>
+   
+     <meta name="description" content="Welcome to Sillyangel3 Personal Website, where sercets are in the website explore My vast Pages, and no games in here." />
+      <link rel="manifest" href="/appmanifest.json" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="gray" />
+	  <link rel="stylesheet" href="https://banana-nana.github.io/Pages/Normal.css"/>
+        <script src="CSU.js"></script>
+  <script src="Main.js"></script>
+  <script src="cookies.js"></script>
+	  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+       
+
+
+  
+  </head>             
+
+  <body> <!--  What it Shows to the user-->
+    <ul>    <!-- Menu For User-->
+      <li><a class="active" href="/Home">Home</a></li>
+      <li><a href ="/Friend">Friends</a></li>
+      <li><a href="/Games">Games</a></li>  
+	    <li><button onclick="Profile()">Profile</button></li>
+         
+      <li>
+    </ul>
+    <br>
+    <!-- Title of the page-->
+    <div class="header">
+      <h1 id="Welcome">Banana-nana is Building Fixing things</h1>
+    </div>
+    
+    
+    <!--  Main Secion -->
+
+	  
+    <!--  Login Profile  -->
+	  
+      <div id="user_div" class="loggedin-div">
+          <h1> Banana-nana Profile </h1> 
+
+          <a href="https://github.com/banana-nana/banana-nana.github.io/blob/main/Updates/README.MD">Read About new Updates</a>
+          
+          <button onclick="PO()">Open Account Settings</button>
+      </div>
+
+      
+
+      <div id="Profile" class="Profile">
+        <h3> Account </h3> 
+        <p id="user_email"> Email :</p>
+        <img src="https://via.placeholder.com/150" class="ui image centered" id="img" width="150" height="150">
+        <p id="config"></p>
+        <button onclick="PC()">Close Account Settings</button> <br>
+        <button onclick="logout()">Logout</button> <br>
+        <button onclick="Admin()">Admin Login</button>
+
+      </div>
+
+  
+ 
+    
+
+  <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA1btAshbXjWcIWkiPdd7_B0L3tUDBYJ_E",
+            authDomain: "formapp-bcef6.firebaseapp.com",
+            databaseURL: "https://formapp-bcef6-default-rtdb.firebaseio.com",
+            projectId: "formapp-bcef6",
+            storageBucket: "formapp-bcef6.appspot.com",
+            messagingSenderId: "488580251116"
+        };
+        firebase.initializeApp(config);
+
+
+
+
+ var img = document.getElementById("img");
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/profile.jpg").getDownloadURL().then(imgUrl => {
+            img.src = imgUrl;
+
+        })
+    }
+})
+
+
+
+
+
+
+
+      </script>
+
+
+
+    
+    
+    
+    
+	
+	
+
+    
+    
+    
+    <!-- Just making the Service worker up and runing so it make it a app for that website turns into a "app" -->
+    
+    
+	  <script> 
+	  
+	  
+	  // Ensure that the browser supports the service worker API
+if (navigator.serviceWorker) {
+// Start registration process on every page load
+window.addEventListener('load', () => {
+	navigator.serviceWorker
+		// The register function takes as argument
+		// the file path to the worker's file
+		.register('/sw.js')
+		// Gives us registration object
+		.then(reg => console.log('Service Worker Registered'))
+		.catch(swErr => console.log(
+				`Service Worker Installation Error: ${swErr}}`));
+	});
+}
+
+	  
+	  
+	  
+	  
+	  </script>
+    
+    
+    
+    <!-- Firebase-->
+        
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDw-FbgLkApePjGgCSYRE6PaUWnnKxa2us",
+        authDomain: "banana-nana.firebaseapp.com",
+        databaseURL: "https://banana-nana-default-rtdb.firebaseio.com",
+        projectId: "banana-nana",
+        storageBucket: "banana-nana.appspot.com",
+        messagingSenderId: "885549855636"
+    };
+    firebase.initializeApp(config);
+    
+    function Profile() {
+    }
+    </script>
+    <script src="/github.js"></script>
+    <!-- Deep Dark -->
+	    
+	    
+	    
+	    
+
+  </body>
+
+</html>

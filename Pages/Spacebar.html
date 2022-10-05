@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  
+
+  <title>
+    Sillyangel3 | Spacebar
+  </title>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Normal.css">
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="Home2.html">Home</a></li>
+      <li><a href="friend.html">Friends</a></li>
+      <li><a href="Pages.html">Page</a></li>
+      <li><a href="https://sites.google.com/students.kleinisd.net/angelswork/Home">Old Web</a></li>
+      <li><a class="active" href="Spacebar.html">Spacebar</a></li>
+      <li>
+    </ul>
+
+<div id="body">
+  <h1 id="counter">You have hit the spacebar <span class="hits">0</span> times.</h1>
+  </body>
+		</div>
+    <script>
+    var hits = 0;
+var hitElement = document.querySelector( '.hits' );
+document.body.onkeyup = function(e) {
+  if( e.keyCode == 32 ) {
+    addHit();
+  }
+}
+
+var addHit = function() {
+  hits++;
+  renderHits();
+}
+
+var renderHits = function() {
+  hitElement.innerHTML = hits;
+}
+
+
+    </script>
+    </html>

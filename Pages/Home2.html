@@ -1,0 +1,248 @@
+<!DOCTYPE html> <!-- Start of the page-->
+<html lang="en">
+
+	
+	
+	 <!-- Tab bar name-->
+  <title>          
+    Sillyangel3 | Home
+  </title>
+
+  
+		<!-- Standardised web app manifest -->
+	<link rel="manifest" href="/appmanifest.json" />
+	
+	
+                         <!-- Add Thing so Its so silmpe to Code and yeah-->
+  <head>
+   
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://banana-nana.github.io/Pages/Normal.css"> 
+       <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="/icon.png" />
+	<meta name="HandheldFriendly" content="true" />
+    <meta
+  name="description"
+  content="Welcome to Sillyangel3 Personal Website, where sercets are in the website explore My vast Pages, and no games in here.">
+  <script src="CSU.js"></script>
+  <script src="Main.js"></script>
+  <script src="cookies.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  
+  </head>             
+
+  <body onload="CFWU()"> <!--  What it Shows to the user-->
+    <ul>    <!-- Menu For User-->
+      <li><a class="active" href="Home2.html">Home</a></li>
+      <li><a href ="friend.html">Friends</a></li>
+      <li><a href="Pages.html">Page</a></li>
+      <li><a href="TRICKED.html">Gamez</a></li>   
+         
+      <li>
+    </ul>
+    <br>
+    <!-- Title of the page-->
+    <div class="header">
+      <h1>Sillyangel3's Website</h1>
+    </div>
+    
+    
+    <!--  Main Secion -->
+    <br>
+   <p> 2022 Updates. </p>
+    <br>
+	  <p> I made a FNAF game that can be run fnaf and also, I made a Admin Login Which is here.</p>
+    <br>
+        <a href="https://banana-nana.github.io/Old-times"> Fnaf.exe</a>
+        <a href="https://banana-nana.github.io/Old-times"> BananaAdmin.exe</a>
+    <br>
+    <!--  Info -->
+
+  
+    <h2> Links </h2>
+    <br>
+      <h3>
+    Download My RBLXS Scripts at
+     </h3>
+  <a href="https://fort-edge.github.io/Website/Pages/Download.html"> Open Other Page</a>  
+<br>
+    <h3> Youtube Channel </h3>
+    <a href="https://www.youtube.com/channel/UCwz5qyEWbPUpOFzJqPObVkQ"> Youtube Channel</a>
+    <br>
+    <h4> Linktree </h4>
+    <a href="https://www.linktr.ee/sillyangel3"> Link Tree Website</a>
+    <br>
+    <h5> Sratch </h5>
+    <a href="https://scratch.mit.edu/users/sillyangel3/"> Sratch Proflie</a>
+	  
+    
+    
+    
+
+  <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA1btAshbXjWcIWkiPdd7_B0L3tUDBYJ_E",
+            authDomain: "formapp-bcef6.firebaseapp.com",
+            databaseURL: "https://formapp-bcef6-default-rtdb.firebaseio.com",
+            projectId: "formapp-bcef6",
+            storageBucket: "formapp-bcef6.appspot.com",
+            messagingSenderId: "488580251116"
+        };
+        firebase.initializeApp(config);
+
+
+
+
+ var img = document.getElementById("img");
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/profile.jpg").getDownloadURL().then(imgUrl => {
+            img.src = imgUrl;
+
+        })
+    }
+})
+
+
+
+
+
+
+
+      </script>
+
+
+
+    
+    
+    
+    
+    
+<!-- Rip Disocrd -->
+<!--
+RIp Minecraft Secion Due to web.dev 
+-->
+    
+    
+   
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="/icon.png" />
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	
+	
+
+    
+    
+    
+    <!-- Just making the Service worker up and runing so it make it a app for that website turns into a "app" -->
+    
+    
+	  <script> 
+	  
+	  
+	  // Ensure that the browser supports the service worker API
+if (navigator.serviceWorker) {
+// Start registration process on every page load
+window.addEventListener('load', () => {
+	navigator.serviceWorker
+		// The register function takes as argument
+		// the file path to the worker's file
+		.register('/sw.js')
+		// Gives us registration object
+		.then(reg => console.log('Service Worker Registered'))
+		.catch(swErr => console.log(
+				`Service Worker Installation Error: ${swErr}}`));
+	});
+}
+
+	  
+	  
+	  
+	  
+	  </script>
+    
+    
+    
+    <!-- Firebase-->
+        
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDw-FbgLkApePjGgCSYRE6PaUWnnKxa2us",
+        authDomain: "banana-nana.firebaseapp.com",
+        databaseURL: "https://banana-nana-default-rtdb.firebaseio.com",
+        projectId: "banana-nana",
+        storageBucket: "banana-nana.appspot.com",
+        messagingSenderId: "885549855636"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="/Firebase/Home2.js"></script>
+    <script src="/Login/github.js"></script>
+    <script>
+      const user = firebase.auth().currentUser;
+
+if (user) {
+  console.log("User is : " + user);
+  document.getElementById("Usertext").innerHTML = user;
+} else {
+  document.getElementById("UserText").innerHTML = "no one is logged in";
+}
+
+
+
+
+
+function Github() {
+    firebase.auth().signInWithRedirect(provider);
+  }
+  
+    </script>
+    <!-- Deep Dark -->
+	    
+	    
+	    
+	    
+	    
+	    
+	    <script> 
+	    
+	    
+Cookie.set("Login", "true");
+
+var Logincookie = Cookie.get("Login");
+var Logintext = document.querySelector("h6");
+
+
+
+if(Logincookie == "true") {
+    document.getElementById("LoginText").innerHTML = "Signed in";
+}
+
+if(Logincookie == "false") {
+    document.getElementById("LoginText").innerHTML = "Sign up";
+}
+	    
+	    </script>
+
+	    
+	    
+  </body>
+
+</html>

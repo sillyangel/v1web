@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+      <link rel="manifest" href="/appmanifest.json" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+      <meta charset="UTF-8" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+      <link rel="apple-touch-icon" sizes="256x256" href="/icon.png" />
+      <meta name="HandheldFriendly" content="true" />
+        <meta
+      name="description"
+      content="Welcome to Sillyangel3 Personal Website, where sercets are in the website explore My vast Pages, and no games in here.">
+      <meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="/icon.png" />
+      <title>banana-nana Login</title>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <script src="github.js"></script>
+
+      <link rel="stylesheet" href="style.css" />
+
+    </head>
+    <body>
+    
+      <div id="login_div" class="main-div">
+        <h3>Banana-nana Login Page</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+    
+        <button onclick="login()">Login to Account</button>
+        <br>
+        <button onclick="Create()">Create A Account</button>
+        <p></p>
+        <button onclick="Skip()">Skip Login</button>
+        <p></p>
+        <h3> Or </h3>
+   <p></p>
+        
+        <button onclick="Github()">Github</button> 
+<br>
+        <button onclick="ResetPass()">Reset Password</button>
+         
+        
+
+      </div>
+    
+      <div id="user_div" class="loggedin-div">
+          <h1> Banana-nana Dashboard </h1> <p id="user_para">Welcome Back</p>
+
+          <a href="https://github.com/banana-nana/banana-nana.github.io/blob/main/Updates/README.MD">Read About new Updates</a>
+          
+          <button onclick="PO()">Open Account Settings</button>
+      </div>
+
+      
+
+      <div id="Profile" class="Profile">
+        <h3> Account </h3> 
+        <p id="user_email"> Email :</p>
+        <img src="https://via.placeholder.com/150" class="ui image centered" id="img" width="150" height="150">
+        <p id="config"></p>
+        <button onclick="PC()">Close Account Settings</button> <br>
+        <button onclick="logout()">Logout</button> <br>
+        <button onclick="Admin()">Admin Login</button>
+
+      </div>
+    
+    
+    
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA1btAshbXjWcIWkiPdd7_B0L3tUDBYJ_E",
+            authDomain: "formapp-bcef6.firebaseapp.com",
+            databaseURL: "https://formapp-bcef6-default-rtdb.firebaseio.com",
+            projectId: "formapp-bcef6",
+            storageBucket: "formapp-bcef6.appspot.com",
+            messagingSenderId: "488580251116"
+        };
+        firebase.initializeApp(config);
+
+
+
+
+        function PC() {
+          document.getElementById("user_div").style.display = "block";
+          document.getElementById("Profile").style.display = "none";
+        }
+
+        function PO() {
+          document.getElementById("Profile").style.display = "block";
+          document.getElementById("user_div").style.display = "none";
+          
+
+
+        }
+
+
+
+ var img = document.getElementById("img");
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/profile.jpg").getDownloadURL().then(imgUrl => {
+            img.src = imgUrl;
+
+        })
+    }
+})
+
+
+
+
+
+
+
+      </script>
+      <script src="index.js"></script>
+
+      
+    
+      <script>
+
+var provider = new firebase.auth.GithubAuthProvider();
+
+var auth = firebase.auth();
+
+function Github() {
+  firebase.auth().signInWithRedirect(provider);
+}
+
+function Google() {
+  auth.signInWithRedirect(google);
+}
+
+function ResetPass() {
+  window.location.href = "/Reset/index.html";
+}
+    
+
+      </script>
+
+
+<script> 
+	  
+	  
+  // Ensure that the browser supports the service worker API
+if (navigator.serviceWorker) {
+// Start registration process on every page load
+window.addEventListener('load', () => {
+navigator.serviceWorker
+  // The register function takes as argument
+  // the file path to the worker's file
+  .register('/sw.js')
+  // Gives us registration object
+  .then(reg => console.log('Service Worker Registered'))
+  .catch(swErr => console.log(
+      `Service Worker Installation Error: ${swErr}}`));
+});
+}
+
+  </script>
+  
+  
+
+
+    </body>
+    </html>
+    <!--      <button onclick="Focebook()">Facebook</button>     -->
